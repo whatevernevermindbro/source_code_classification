@@ -241,9 +241,12 @@ out_df = pd.concat(res)
 out_df = out_df[out_df['code_block'].astype(bool)]
 out_df = out_df[out_df['tag'].astype(bool)]
 
-out_df.to_csv('/content/code_blocks.csv', sep='\t', encoding='utf-8')
-out_df.to_json('/content/code_blocks.json', orient = 'index')
+out_df.to_csv(KK_path + 'code_blocks.csv', sep='\t', encoding='utf-8')
+out_df.to_json(KK_path + 'code_blocks.json', orient = 'index')
 out_df.head()
+
+out_df.to_csv(KK_path + 'code_blocks.csv', sep='\t', encoding='utf-8')
+out_df.to_json(KK_path + 'code_blocks.json', orient = 'index')
 
 """## Вопросы:
 
