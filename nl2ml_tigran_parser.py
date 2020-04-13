@@ -224,12 +224,12 @@ df = pd.read_csv(KK_path + 'kk_duplicate.csv')
 df = pd.read_csv(KK_path + '/content/kk.csv')
 '''
 df = pd.read_csv(KK_path + 'kk_united.csv')
-df = df.reset_index(drop=True)
 df.drop_duplicates(subset = 'ref', inplace = True)
 df.sort_values(by = 'totalVotes', inplace = True, ascending = False)
+df = df.reset_index(drop=True)
 
 res = []
-kernels = df['ref']']
+kernels = df['ref']
 for i in range(len(kernels)):
     start_time = time.time()
     res.append(notebook_parse(kernels[i]))
@@ -244,9 +244,6 @@ out_df = out_df[out_df['tag'].astype(bool)]
 out_df.to_csv(KK_path + 'code_blocks.csv', sep='\t', encoding='utf-8')
 out_df.to_json(KK_path + 'code_blocks.json', orient = 'index')
 out_df.head()
-
-out_df.to_csv(KK_path + 'code_blocks.csv', sep='\t', encoding='utf-8')
-out_df.to_json(KK_path + 'code_blocks.json', orient = 'index')
 
 """## Вопросы:
 
