@@ -187,35 +187,49 @@ def notebook_parse (link):
     #             out.at[i, 'code_block'] = out.loc[i, 'code_block'].replace(comment, '')
     return out
 
-# Commented out IPython magic to ensure Python compatibility.
+# df = pd.concat([df_1, df_2, df_3, df_4, df_5, df_6, df_7, df_8, df_9, df_10, df_11, df_12])
+# df.head(5)
+# df.drop('Unnamed: 0', axis=1, inplace=True)
+# df.to_csv(KK_path + 'kk_united.csv', index=False)
+
+# df_1.dtypes, df_2.dtypes, df_3.dtypes, df_4.dtypes, df_5.dtypes, df_6.dtypes, df_7.dtypes, df_8.dtypes, df_9.dtypes, df_10.dtypes, df_11.dtypes, df_12.dtypes
+
+df = pd.read_csv(KK_path + 'kk_united.csv')
+df
+
 # %time
 #################################################################################################################
 #----------------------------------------------- PARSING KERNELS -----------------------------------------------#
 #################################################################################################################
-'''                         FOR THE FINAL RUN
-df_1 = pd.read_csv('/content/kaggle_kernels/kaggle_kernels_hotness.csv')
-df_2 = pd.read_csv('/content/kaggle_kernels/kaggle_kernels_scoreAscending.csv')
-df_3 = pd.read_csv('/content/kaggle_kernels/kaggle_kernels_scoreDescending.csv')
-df_4 = pd.read_csv('/content/kaggle_kernels/kaggle_kernels_voteCount.csv')
-df_5 = pd.read_csv('/content/kaggle_kernels/kk_2_4_2020.csv')
-df_6 = pd.read_csv('/content/kaggle_kernels/kk_4_4_2020.csv')
-df_7 = pd.read_csv('/content/kaggle_kernels/kk_6_4_2020.csv')
-df_8 = pd.read_csv('/content/kaggle_kernels/kk_8_4_2020.csv')
-df = pd.concat([df_1, df_2, df_3, df_4, df_5, df_6, df_7, df_8])
-'''
+KK_path = '/content/drive/My Drive/NL2ML/Tigran_parser/kaggle_kernels/'
+#                #  FOR THE FINAL RUN
+# df_1 = pd.read_csv(KK_path + 'kaggle_kernels_hotness.csv')
+# df_2 = pd.read_csv(KK_path + 'kaggle_kernels_scoreAscending.csv')
+# df_3 = pd.read_csv(KK_path + 'kaggle_kernels_scoreDescending.csv')
+# df_4 = pd.read_csv(KK_path + 'kaggle_kernels_voteCount.csv')
+# df_5 = pd.read_csv(KK_path + 'kk_2_4_2020.csv')
+# df_6 = pd.read_csv(KK_path + 'kk_4_4_2020.csv')
+# df_7 = pd.read_csv(KK_path + 'kk_6_4_2020.csv')
+# df_8 = pd.read_csv(KK_path + 'kk_8_4_2020.csv')
+# df_9 = pd.read_csv(KK_path + 'kaggle_kernels_viewCount.csv')
+# df_10 = pd.read_csv(KK_path + 'kaggle_kernels_commentCount.csv')
+# df_11 = pd.read_csv(KK_path + 'kk_10_4_2020.csv')
+# df_12 = pd.read_csv(KK_path + 'kk_12_4_2020.csv')
+# df = pd.concat([df_1, df_2, df_3, df_4, df_5, df_6, df_7, df_8, df_9, df_10, df_11, df_12], columns=df_1.columns)
+# df.to_csv(KK_path + 'kk_united.csv', index=False)
 '''                         FOR MULTIPLE KERNEL TEST RUN
-df = pd.read_csv('/content/kk_duplicate.csv')
+df = pd.read_csv(KK_path + 'kk_duplicate.csv')
 '''
 '''                         FOR 1 KERNEL TEST RUN
-df = pd.read_csv('/content/kk.csv')
+df = pd.read_csv(KK_path + '/content/kk.csv')
 '''
-# df = pd.read_csv('/content/kk.csv')
-df = pd.read_csv('/content/kaggle_kernels_hotness.csv')
+df = pd.read_csv(KK_path + 'kk_united.csv')
+df = df.reset_index(drop=True)
 df.drop_duplicates(subset = 'ref', inplace = True)
 df.sort_values(by = 'totalVotes', inplace = True, ascending = False)
 
 res = []
-kernels = df.iloc[:, 0]
+kernels = df['ref']']
 for i in range(len(kernels)):
     start_time = time.time()
     res.append(notebook_parse(kernels[i]))
@@ -234,7 +248,8 @@ out_df.head()
 """## Вопросы:
 
 
-*   Почему парсер падает при прогоне?
+*   (решено) Почему парсер падает при прогоне?
+*   (решено) Парсер падает при прогоне после объединения
 *   Как парсятся тэги к комментариям?
 """
 
