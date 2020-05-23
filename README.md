@@ -5,4 +5,4 @@ __NL2ML BERT Distances.ipynb__ - notebook with expiremints concerning sense of d
 
 __NL2ML_BERT_Classifier.ipynb__ - notebook with preprocessing and training pipeline.
 
-__NL2ML_Regex_Labeling_+_LogReg.ipynb__ - notebook with data labelling with regex and building logreg
+__NL2ML_Regex_Labeling + LogReg.ipynb__ - notebook with data labelling with regex and building logreg
