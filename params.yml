@@ -1,7 +1,7 @@
-DATASET_PATH: /home/jovyan/work/chunks_20_validate.csv
+DATASET_PATH: /home/jovyan/work/chunks_25_validate.csv
 label: tag
 max_df: 0.3
 min_df: 5
 model: Logistic Regression
-nrows: 280
+nrows: 224
 smooth_idf: true
