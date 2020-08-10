@@ -1,11 +1,11 @@
 C: 100
-data: ./data/chunks_20_validate.csv
+data: ./data/chunks_30_validate.csv
 kernel: linear
 label: tag
 max_df: 0.3
 min_df: 5
 model: ./models/svm_regex_10-08-20.sav
-nrows: 280
+nrows: 187
 random_state: 241
 smooth_idf: true
 verbose: 1
