@@ -1,10 +1,11 @@
 C: 100
-DATASET_PATH: ./data/code_blocks_regex (old).csv
+data: ./data/code_blocks_unique_regex.csv
 kernel: linear
 label: preprocessing
 max_df: 0.3
 min_df: 5
-model: SVM
-nrows: 221803
+model: ./models/logreg_regex.sav
+nrows: 226054
 random_state: 241
 smooth_idf: true
+verbose: 1
