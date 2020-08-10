@@ -62,7 +62,7 @@ def SVM_evaluate(df, code_blocks, tfidf_params, TFIDF_DIR, SVM_params):
 if __name__ == '__main__':
     DATASET_PATH = './data/code_blocks_regex (old).csv'
     MODEL_DIR = './models/svm_regex_{}.sav'.format(datetime.today().strftime('%d-%m-%y'))
-    TFIDF_DIR = './models/tfidf.pickle'
+    TFIDF_DIR = './models/tfidf_svm.pickle'
     CODE_COLUMN = 'code_block'
     TAG_TO_PREDICT = 'preprocessing'
     df, code_blocks = load_code_blocks(DATASET_PATH, CODE_COLUMN)
