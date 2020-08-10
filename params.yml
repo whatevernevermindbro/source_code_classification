@@ -1,11 +1,11 @@
 C: 100
-data: ./data/code_blocks_unique_regex.csv
+data: ./data/chunks_5_validate.csv
 kernel: linear
-label: preprocessing
+label: tag
 max_df: 0.3
 min_df: 5
-model: ./models/logreg_regex.sav
-nrows: 226054
+model: ./models/svm_regex_10-08-20.sav
+nrows: 1125
 random_state: 241
 smooth_idf: true
 verbose: 1
