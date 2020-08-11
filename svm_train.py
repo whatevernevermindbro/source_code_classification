@@ -60,9 +60,9 @@ def SVM_evaluate(df, code_blocks, tfidf_params, TFIDF_DIR, SVM_params):
     return metrics
 
 if __name__ == '__main__':
-    DATASET_PATH = './data/code_blocks_regex (old).csv'
-    MODEL_DIR = './models/svm_regex_{}.sav'.format(datetime.today().strftime('%d-%m-%y'))
-    TFIDF_DIR = './models/tfidf_svm.pickle'
+    DATASET_PATH = './data/code_blocks_regex_graph_v2.csv'
+    MODEL_DIR = './models/svm_regex_{}.sav'.format('graph_v2')
+    TFIDF_DIR = './models/tfidf_svm_graph_v2.pickle'
     CODE_COLUMN = 'code_block'
     TAG_TO_PREDICT = 'preprocessing'
     df, code_blocks = load_code_blocks(DATASET_PATH, CODE_COLUMN)
@@ -77,12 +77,12 @@ if __name__ == '__main__':
     data_meta = {'DATASET_PATH': DATASET_PATH
                 ,'nrows': nrows
                 ,'label': TAG_TO_PREDICT
-                ,'model': 'SVM'}
-    # metrics = SVM_evaluate(df, code_blocks, tfidf_params, TFIDF_DIR, SVM_params)
+                ,'model': MODEL_DIR}
+
     with dagshub.dagshub_logger() as logger:
         print("evaluating..")
         metrics = SVM_evaluate(df, code_blocks, tfidf_params, TFIDF_DIR, SVM_params)
-        print("saving results..")
+        print("saving the results..")
         logger.log_hyperparams(data_meta)
         logger.log_hyperparams(tfidf_params)
         logger.log_hyperparams(SVM_params)

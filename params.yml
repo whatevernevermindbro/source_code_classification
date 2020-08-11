@@ -1,7 +1,10 @@
+C: 100
 DATASET_PATH: ./data/code_blocks_regex_graph_v2.csv
+kernel: linear
 label: preprocessing
 max_df: 0.3
 min_df: 5
-model: Logistic Regression
+model: ./models/svm_regex_graph_v2.sav
 nrows: 226054
+random_state: 241
 smooth_idf: true
