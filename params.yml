@@ -1,10 +1,11 @@
 C: 100
-DATASET_PATH: ./data/code_blocks_regex_graph_v2.csv
+data: ./data/chunks_5_validate.csv
 kernel: linear
-label: preprocessing
+label: tag
 max_df: 0.3
 min_df: 5
 model: ./models/svm_regex_graph_v2.sav
-nrows: 226054
+nrows: 1125
 random_state: 241
 smooth_idf: true
+verbose: 1
