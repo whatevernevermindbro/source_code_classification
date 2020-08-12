@@ -57,6 +57,7 @@ def SVM_evaluate(df, code_blocks, tfidf_params, TFIDF_DIR, SVM_params):
     # confus_matrix = confusion_matrix(model, X_test, y_test)
     metrics = {'test_accuracy': accuracy
             , 'test_f1_score': f1}
+    print(metrics)
     return metrics
 
 if __name__ == '__main__':
