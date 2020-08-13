@@ -1,0 +1,4 @@
+[core]
+    remote = levin
+['remote "levin"']
+    url = C:/Users/Alexander Levin/OneDrive/Education/HSE/NL2ML/source_code_classification/data
