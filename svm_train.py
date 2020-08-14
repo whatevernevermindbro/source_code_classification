@@ -66,6 +66,8 @@ if __name__ == '__main__':
     TFIDF_DIR = './models/tfidf_svm_graph_v2.pickle'
     CODE_COLUMN = 'code_block'
     TAG_TO_PREDICT = 'preprocessing'
+    SCRIPT_DIR = __file__
+    
     df, code_blocks = load_code_blocks(DATASET_PATH, CODE_COLUMN)
     nrows = df.shape[0]
     print("loaded")
@@ -78,7 +80,8 @@ if __name__ == '__main__':
     data_meta = {'DATASET_PATH': DATASET_PATH
                 ,'nrows': nrows
                 ,'label': TAG_TO_PREDICT
-                ,'model': MODEL_DIR}
+                ,'model': MODEL_DIR
+                ,'source': SCRIPT_DIR}
 
     with dagshub.dagshub_logger() as logger:
         print("evaluating..")
