@@ -61,9 +61,9 @@ def SVM_evaluate(df, code_blocks, tfidf_params, TFIDF_DIR, SVM_params):
     return metrics
 
 if __name__ == '__main__':
-    DATASET_PATH = './data/code_blocks_regex_graph_v2.csv'
-    MODEL_DIR = './models/svm_regex_{}.sav'.format('graph_v2')
-    TFIDF_DIR = './models/tfidf_svm_graph_v2.pickle'
+    DATASET_PATH = './data/code_blocks_regex_graph_v2.1.csv'
+    MODEL_DIR = './models/svm_regex_{}.sav'.format('graph_v2.1')
+    TFIDF_DIR = './models/tfidf_svm_graph_v2.1.pickle'
     CODE_COLUMN = 'code_block'
     TAG_TO_PREDICT = 'preprocessing'
     SCRIPT_DIR = __file__
