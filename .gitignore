@@ -3,3 +3,4 @@ models/
 .vscode/settings.json
 foldername/
 svm_classifier.ipynb
+/open_data
