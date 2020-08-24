@@ -14,7 +14,7 @@ from sklearn.multiclass import OneVsRestClassifier
 import dagshub
 
 def load_code_blocks(DATASET_PATH, CODE_COLUMN):
-    df = pd.read_csv(DATASET_PATH, encoding='utf-8', comment='#', sep=',')#, quoting=csv.QUOTE_NONE, error_bad_lines=False)#, sep=','
+    df = pd.read_csv(DATASET_PATH, encoding='utf-8', comment='#', sep='\t')#, quoting=csv.QUOTE_NONE, error_bad_lines=False)#, sep=','
     print(df.head())
     code_blocks = df[CODE_COLUMN]
     # test_size = 0.1
@@ -61,9 +61,10 @@ def SVM_evaluate(df, code_blocks, tfidf_params, TFIDF_DIR, SVM_params):
     return metrics
 
 if __name__ == '__main__':
-    DATASET_PATH = './data/code_blocks_regex_graph_v2.1.csv'
-    MODEL_DIR = './models/svm_regex_{}.sav'.format('graph_v2.1')
-    TFIDF_DIR = './models/tfidf_svm_graph_v2.1.pickle'
+    GRAPH_VERSION = 2.2
+    DATASET_PATH = './data/code_blocks_regex_graph_v{}.csv'.format(GRAPH_VERSION)
+    MODEL_DIR = './models/svm_regex_graph_v{}.sav'.format(GRAPH_VERSION)
+    TFIDF_DIR = './models/tfidf_svm_graph_v{}.pickle'.format(GRAPH_VERSION)
     CODE_COLUMN = 'code_block'
     TAG_TO_PREDICT = 'preprocessing'
     SCRIPT_DIR = __file__
