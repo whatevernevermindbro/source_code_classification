@@ -35,7 +35,7 @@
 		"LGBM (", "CatBoost (", "Perceptron (", "KNeighborsRegressor (", "KNeighborsClassifier (", "SGDRegressor (", "ElasticNet (", "ElasticNetCV (", "KMeans (", "AgglomerativeClustering (",
 		"SpectralClustering (", "CategoricalNB (", "ComplementNB (", "DecisionTreeClassifier (", "DecisionTreeRegressor ("],
 
-    "train": [".fit_transform", ".fit", "epoch", "loss", "optimizer"],
+    "train": [".fit", "epoch", "loss", "optimizer"],
 
     "predict": [".predict", "_error", ".mean_", "_score", "_distance"]
 }
