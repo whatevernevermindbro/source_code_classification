@@ -1,7 +1,7 @@
 {
 	"imports": ["import", "from"],
 
-   	"data_load": [".load", "_load", "_dump", "load_", ".csv", "glob", "pickle.", "read_", "download", ".txt", ".json", ".png", ".jpg", ".jpeg",],
+   	"data_load": [".load", "_load", "_dump", "load_", ".csv", "glob", "pickle.", "read_", "download", ".txt", ".json", ".png", ".jpg", ".jpeg"],
 
 	"preprocessing": ["train_test_split(", "Normalizer(", "StandardScaler(", "normalize(", "scale(", "DictVectorizer(", 
 					"CountVectorizer(", "HashingVectorizer(", "TfidfVectorizer(", "Stemmer(",
