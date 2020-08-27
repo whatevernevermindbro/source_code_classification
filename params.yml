@@ -1,11 +1,8 @@
-C: 100
-DATASET_PATH: ./data/code_blocks_regex_graph_v2.2.csv
-kernel: linear
+DATASET_PATH: ./data/code_blocks_regex_graph_v3.csv
 label: preprocessing
 max_df: 0.3
 min_df: 5
-model: ./models/svm_regex_graph_v2.2.sav
+model: ./models/logreg_regex_graph_v3.sav
 nrows: 226054
-random_state: 241
+script_dir: logreg_classifier.ipynb
 smooth_idf: true
-source: svm_train.py
