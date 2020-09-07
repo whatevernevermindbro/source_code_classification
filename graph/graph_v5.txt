@@ -1,4 +1,4 @@
-graph = {
+{
 	"import": [r'import \w+ as \w+', r'import \w+', r'from \w+ import \w+', r'from \w+ import \w+ as \w+'],
 
 	"data_import": [r'[ ]{0,1}=[ ]{0,1}open[ ]{0,1}\(',
@@ -39,7 +39,7 @@ graph = {
 	"deep_learning_model": [r'.compile()', r'tf.nn.', r'tf.add', r'tf.layers', r'tf.train', r'Layer(', r'Model(',
 			r'model.summary()', r'input_shape=', r'Optimizer', r'Adam', r'SGD', r'tf.Variable', r'K.',
 			r'torch.nn', r'.load_weights(', r'model.children', r'model.base_layers', r'model.parameters', r'Sequential(',
-			r'nn.Module', r'F.']
+			r'nn.Module', r'F.'],
 	
 	"train": [r'.fit', r'epoch', r'loss', r'optimizer'],
 
