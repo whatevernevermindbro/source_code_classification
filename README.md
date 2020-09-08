@@ -3,11 +3,13 @@ This is a repo of NL2ML-project of the Laboratory of Methods for Big Data Analys
 The repo is a mirror of HSE LAMBDA GitLab - https://gitlab.com/lambda-hse/nl2ml \
 The project page - https://www.notion.so/NL2ML-Corpus-1ed964c08eb049b383c73b9728c3a231
 
-## Project Goals:
-
+## Project Goals
 The current short-term goal is to build a model that will be able to classify a source code chunk and to specify where the detected class is exactly in the chunk (tag segmentation).
 
 The main goal is to build a model that will be able to generate code getting a text of the task in english as an input.
+
+## Repository Description
+This repository contains instruments which the project's team has been using to label source code chunks with Knowledge Graph vertices and to train models to recognize this vertices in future. By Knowledge Graph vertices we mean an elementary part of ML-pipeline. The current latest version of the Knowledge Graph contains the following high-level vertices: ['import', 'data_import', 'data_export', 'preprocessing', 'visualization', 'model', 'deep_learning_model', 'train' 'predict'].
 
 ## Contents:
 __nl2ml_notebook_parser.py__ - a script for parsing Kaggle notebooks and process them to JSON/CSV/Pandas.
