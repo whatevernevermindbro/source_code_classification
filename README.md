@@ -1,5 +1,5 @@
 # Source Code Classification
-__This is a repo of the Natural Language to Machine Learning (NL2ML) project of the Laboratory of Methods for Big Data Analysis at Higher School of Economics (HSE LAMBDA).__\
+__This is a repo of the Natural Language to Machine Learning (NL2ML) project of the Laboratory of Methods for Big Data Analysis at Higher School of Economics (HSE LAMBDA).__
 
 The project's official __repo__ is stored on GitLab (HSE LAMBDA repository) - https://gitlab.com/lambda-hse/nl2ml \
 The project's __full description__ is stored on Notion - https://www.notion.so/NL2ML-Corpus-1ed964c08eb049b383c73b9728c3a231 \
@@ -7,7 +7,7 @@ The project's __experiments__ are stored on DAGsHub - https://dagshub.com/levin/
 
 ## Project Goals
 ### Short-Term Goal
-To build a model classifying a source code chunk and to specify where the detected class is exactly in the chunk (tag segmentation).\
+To build a model classifying a source code chunk and to specify where the detected class is exactly in the chunk (tag segmentation).
 ### Long-Term Goal
 To build a model generating code by getting a short raw english task in as an input.
 
