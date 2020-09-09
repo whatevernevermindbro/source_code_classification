@@ -36,8 +36,8 @@
 		"KMeans", "AgglomerativeClustering", "SpectralClustering", "CategoricalNB", "ComplementNB",
 		"DecisionTreeClassifie", "DecisionTreeRegresso", "Lasso", "CatBoost"],
 	
-	"deep_learning_model": [".compile()", "tf.nn.", "tf.add", "tf.layers", "tf.train", "Layer(", "Model(",
-			"model.summary()", "input_shape=", "Optimize", "Adam", "SGD", "tf.Variable", "K.",
+	"deep_learning_model": [".compile(", "tf.nn.", "tf.add", "tf.layers", "tf.train", "Layer(", "Model(",
+			"model.summary(", "input_shape=", "Optimize", "Adam", "SGD", "tf.Variable", "K.",
 			"torch.nn", ".load_weights(", "model.children", "model.base_layers", "model.parameters", "Sequential(",
 			"nn.Module", "F."],
 	
