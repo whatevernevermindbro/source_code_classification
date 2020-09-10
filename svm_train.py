@@ -15,7 +15,7 @@ from sklearn.multioutput import MultiOutputRegressor
 import dagshub
 
 def load_code_blocks(DATASET_PATH, CODE_COLUMN):
-    df = pd.read_csv(DATASET_PATH, encoding='utf-8', comment='#', sep='\t')#, quoting=csv.QUOTE_NONE, error_bad_lines=False)#, sep=','
+    df = pd.read_csv(DATASET_PATH, encoding='utf-8', comment='#', sep=',')#, quoting=csv.QUOTE_NONE, error_bad_lines=False)#, sep=','
     df.dropna(axis=0, inplace=True)
     code_blocks = df[CODE_COLUMN]
     # test_size = 0.1
@@ -90,13 +90,13 @@ def SVM_multioutput_evaluate(df, code_blocks, tfidf_params, TFIDF_DIR, SVM_param
     return metrics
 
 if __name__ == '__main__':
-    GRAPH_VERSION = 4
+    GRAPH_VERSION = 5
     DATASET_PATH = './data/code_blocks_regex_graph_v{}.csv'.format(GRAPH_VERSION)
     MODEL_DIR = './models/svm_regex_graph_v{}.sav'.format(GRAPH_VERSION)
     TFIDF_DIR = './models/tfidf_svm_graph_v{}.pickle'.format(GRAPH_VERSION)
     CODE_COLUMN = 'code_block'
     TAGS_TO_PREDICT = ['import', 'data_import', 'data_export', 'preprocessing',
-                        'visualization', 'model', 'train', 'predict']
+                        'visualization', 'model', 'deep_learning_model', 'train', 'predict']
     SCRIPT_DIR = __file__
     
     df, code_blocks = load_code_blocks(DATASET_PATH, CODE_COLUMN)
