@@ -1,5 +1,4 @@
-graph = {
-	"import": ["import \w+ as \w+", "import \w+", "from \w+ import \w+", "from \w+ import \w+ as \w+"],
+{	"import": ["import \w+ as \w+", "import \w+", "from \w+ import \w+", "from \w+ import \w+ as \w+"],
 
 	"data_import": ["[ ]{0,1}=[ ]{0,1}open[ ]{0,1}\(",
 			"with open[ ]{0,1}\([ ]{0,1}[\'\"]\w+.\w+[\'\"][ ]{0,1},[ ]{0,1}[\'\"]\w+[\'\"]\) as \w+[ ]{0,1}:",
