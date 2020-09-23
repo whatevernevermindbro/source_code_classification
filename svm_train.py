@@ -112,7 +112,7 @@ if __name__ == '__main__':
                 ,'nrows': nrows
                 ,'label': TAGS_TO_PREDICT
                 ,'model': MODEL_DIR
-                ,'source': SCRIPT_DIR}
+                ,'script_dir': SCRIPT_DIR}
 
     with dagshub.dagshub_logger() as logger:
         print("evaluating..")
