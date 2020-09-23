@@ -1,8 +1,1 @@
-DATASET_PATH: ./data/golden_884_set.csv
-GRAPH_VER: 5
-label: '[''import'', ''data_import'', ''data_export'', ''preprocessing'', ''visualization'',
-  ''model'', ''deep_learning_model'', ''train'', ''predict'']'
-model: regex_v5
-nrows: 884
-script_dir: ./regex.ipynb
-task: regex evaluation
+{}
