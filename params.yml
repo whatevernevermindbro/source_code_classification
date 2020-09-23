@@ -1,10 +1,8 @@
-DATASET_PATH: ./data/code_blocks_regex_graph_v5.csv
+DATASET_PATH: ./data/golden_884_set.csv
+GRAPH_VER: 5
 label: '[''import'', ''data_import'', ''data_export'', ''preprocessing'', ''visualization'',
   ''model'', ''deep_learning_model'', ''train'', ''predict'']'
-max_df: 0.3
-min_df: 5
-model: ./models/logreg_regex_graph_v5.sav
-nrows: 225565
-script_dir: logreg_classifier.ipynb
-smooth_idf: true
-task: training and evaluation
+model: regex_v5
+nrows: 884
+script_dir: ./regex.ipynb
+task: regex evaluation
