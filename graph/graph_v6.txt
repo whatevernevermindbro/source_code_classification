@@ -1,7 +1,8 @@
-{	"import": ["import \\w+ as \\w+", "import \\w+", "from \\w+ import \\w+", "from \\w+ import \\w+ as \\w+"],
+{	
+	"import": ["import \\w+ as \\w+", "import \\w+", "from \\w+ import \\w+", "from \\w+ import \\w+ as \\w+"],
 
-	"data_import": ["[ ]{0,1}=[ ]{0,1}open[ ]{0,1}\\(",
-			"with open[ ]{0,1}\\([ ]{0,1}[\\'\\"]\\w+.\\w+[\\'\\"][ ]{0,1},[ ]{0,1}[\\'\\"]\\w+[\\'\\"]\\) as \\w+[ ]{0,1}:",
+	"data_import": ["[ ]{0,1}=[ ]{0,1}open[ ]{0,1}(",
+			"with open[ ]{0,1}\\([ ]{0,1}[\\'\"]\\w+.\\w+[\\'\"][ ]{0,1},[ ]{0,1}[\\'\"]\\w+[\\'\"]\\)) as \\w+[ ]{0,1}:",
 			"read_csv", "read_fwf", "read_json", "read_html", "read_clipboard", "read_excel", "read_hdf",
 			"read_feather", "read_parquet", "read_orc", "read_msgpack", "read_stata", "read_sas",
 			"read_spss", "read_pickle", "read_sql", "read_gbq"],
