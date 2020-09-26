@@ -1,14 +1,11 @@
-C: 100
 DATASET_PATH: ./data/code_blocks_regex_graph_v6.csv
 GRAPH_VER: 6
-kernel: linear
 label: '[''import'', ''data_import'', ''data_export'', ''preprocessing'', ''visualization'',
   ''model'', ''deep_learning_model'', ''train'', ''predict'']'
 max_df: 0.3
 min_df: 5
-model: ./models/svm_regex_graph_v6.sav
+model: ./models/logreg_regex_graph_v6.sav
 nrows: 225565
-random_state: 241
-script_dir: c:/Users/Alex/OneDrive/Education/HSE/NL2ML/source_code_classification/svm_train.py
+script_dir: logreg_classifier.ipynb
 smooth_idf: true
 task: training and evaluation
