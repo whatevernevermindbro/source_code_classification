@@ -35,7 +35,10 @@ graph = {
 		r'Perceptron', r'KNeighborsRegressor', r'KNeighborsClassifier', r'SGDRegressor', r'ElasticNet', r'ElasticNetCV',
 		r'KMeans', r'AgglomerativeClustering', r'SpectralClustering', r'CategoricalNB', r'ComplementNB',
 		r'DecisionTreeClassifier', r'DecisionTreeRegressor', r'Lasso', r'CatBoost'],
-
+	
+	"deep_learning_model": [r'.compile()', r'tf.nn.', r'tf.add', r'tf.layers', r'tf.train', r'Layer(', r'Model(',
+			r'torch.nn', r'.eval()']
+	
 	"train": [r'.fit', r'epoch', r'loss', r'optimizer'],
 
 	"predict": [r'.predict', r'_error', r'.mean_', r'_score', r'_distance']

@@ -1,8 +1,8 @@
-import pandas as pd
-import numpy as np
 import pickle
 from datetime import datetime
 
+import pandas as pd
+import numpy as np
 from sklearn.metrics import accuracy_score, f1_score
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.model_selection import KFold, GridSearchCV
@@ -11,7 +11,6 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import BaggingClassifier
 from sklearn.multiclass import OneVsRestClassifier
 from sklearn.multioutput import MultiOutputRegressor
-
 import dagshub
 
 def load_code_blocks(DATASET_PATH, CODE_COLUMN):
@@ -90,10 +89,10 @@ def SVM_multioutput_evaluate(df, code_blocks, tfidf_params, TFIDF_DIR, SVM_param
     return metrics
 
 if __name__ == '__main__':
-    GRAPH_VER = 6
-    DATASET_PATH = './data/code_blocks_regex_graph_v{}.csv'.format(GRAPH_VER)
-    MODEL_DIR = './models/svm_regex_graph_v{}.sav'.format(GRAPH_VER)
-    TFIDF_DIR = './models/tfidf_svm_graph_v{}.pickle'.format(GRAPH_VER)
+    GRAPH_VERSION = 5
+    DATASET_PATH = './data/code_blocks_regex_graph_v{}.csv'.format(GRAPH_VERSION)
+    MODEL_DIR = './models/svm_regex_graph_v{}.sav'.format(GRAPH_VERSION)
+    TFIDF_DIR = './models/tfidf_svm_graph_v{}.pickle'.format(GRAPH_VERSION)
     CODE_COLUMN = 'code_block'
     TAGS_TO_PREDICT = ['import', 'data_import', 'data_export', 'preprocessing',
                         'visualization', 'model', 'deep_learning_model', 'train', 'predict']
@@ -112,12 +111,10 @@ if __name__ == '__main__':
                 ,'nrows': nrows
                 ,'label': TAGS_TO_PREDICT
                 ,'model': MODEL_DIR
-                ,'script_dir': SCRIPT_DIR
-                ,'task':'training and evaluation'
-                ,'GRAPH_VER': GRAPH_VER}
+                ,'script_dir': SCRIPT_DIR}
 
     with dagshub.dagshub_logger() as logger:
-        print("starting training and evaluation..")
+        print("evaluating..")
         metrics = SVM_multioutput_evaluate(df, code_blocks, tfidf_params, TFIDF_DIR, SVM_params)
         print("saving the results..")
         logger.log_hyperparams(data_meta)
